@@ -14,7 +14,7 @@ const CartRouter = require('./routes/cartitems.route');
 const app = express();
 const port = process.env.PORT || 3001
 app.use(cors({
-          origin:"http://localhost:5173",
+          origin:"https://magic-pin.onrender.com",
           credentials:true
 }))
 app.use(express.json());
