@@ -22,7 +22,7 @@ import Orderplaced from './pages/Orderplaced'
 import Myorders from './pages/Myorders'
 import usegetmyorders from './hooks/usegetmyorders'
 import useGetcartitems from './hooks/useCartitems'
-export const serverurl = "http://localhost:3000"
+export const serverurl = "https://magic-pin-backend.onrender.com"
 function App() {
   useCurrentuser()
   useGetcity()
