@@ -28,8 +28,8 @@ exports.signup=async(req,res)=>{
          })  
          const token = gentoken(result._id );
               res.cookie("token",token,{
-                    secure:false,
-                    sameSite:"lax",
+                    secure:true,
+                    sameSite:"None",
                     maxAge:7*24*60*60*1000,
                     httpOnly:true
               })
@@ -54,8 +54,8 @@ exports.login=async(req,res)=>{
        }
 const token = await gentoken(user._id);
               res.cookie("token",token,{
-                    secure:false,
-                    sameSite:"lax",
+                    secure:true,
+                    sameSite:"None",
                     maxAge:7*24*60*60*1000,
                     httpOnly:true
               })
