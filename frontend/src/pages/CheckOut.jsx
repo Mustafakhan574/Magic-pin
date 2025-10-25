@@ -91,46 +91,6 @@ const CheckOut = () => {
     </div>
     <div className='w-full max-w-[900px] rounded-2xl shadow-2xl p-6 space-y-6'>
       <h1 className='text-3xl font-bold'>CheckOut</h1>
-      <section>
-          <h2 className='text-lg font-semibold mb-2 flex items-center gap-2 '><CiLocationOn size={28} className='text-red-500 font-bold'/>Delivery Location</h2>
-          <div className='flex gap-2 mb-3'>
-                    <input type="text" className='flex-1 border rounded-lg p-2 text-sm focus:outline-none focus:ring-1 focus:ring-[aqua]' placeholder='Enter your address' value={addressinput} onChange={(e)=>setaddressinput(e.target.value)}/>
-                    <button className='hover:border p-2 rounded-3xl'onClick={latlonbyaddress}><IoIosSearch size={25}/></button>
-                    <button className='hover:border p-2 rounded-3xl'onClick={getcurlocation}><TbCurrentLocation size={20}/></button>
-          </div>
-          <div className='rounded-xl border overflow-hidden'>
-          <div className='h-64 w-full items-center justify-center'>
-          <MapContainer className='w-full h-full' center={[location?.lat,location?.lon]} zoom={13}>
-             <TileLayer
-    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-  />  
-  <RecenterMap location={location}/>
-  <Marker position={[location?.lat,location?.lon]} draggable eventHandlers={{dragend:onDragend}}></Marker>
-          </MapContainer>
-          </div>
-          </div>
-      </section>
-        <section>
-          <h2 className='text-lg font-medium'>Payment Method</h2>
-          <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
-            <div className={`flex items-center gap-3 rounded-xl border p-4 text-left transition ${paymentmethod === "cod" ? "border-[red] bg-amber-300 shadow":"border-grey-200 hover:border-grey-300"}`} onClick={()=>setpaymentmethod("cod")}>
-             <span className='inline-flex h-10 w-10 items-center justify-center rounded-full bg-green-400'><MdDeliveryDining className='text-xl'/></span>
-             <div>
-             <p className='font-medium'>Cash on Delivery</p>
-             <p className='text-xs'>Pay when your item arrive</p>
-             </div>
-            </div>
-            <div className={`flex items-center gap-3 rounded-xl border p-4 text-left transition ${paymentmethod === "online" ? "border-[red] bg-amber-300 shadow":"border-grey-200 hover:border-grey-300"}`}onClick={()=>setpaymentmethod("online")}>
-            <span className='inline-flex h-10 w-10 items-center justify-center rounded-full border bg-[aqua]'><CiMobile4 className='text-xl font-bold'/></span>
-            <span className='inline-flex h-10 w-10 items-center justify-center rounded-full border bg-[aqua]'><BsCreditCard2Back className='text-xl'/></span>
-            <div>
-              <p className='font-medium'>UPI/CREDIT/DEBIT CARD</p>
-              <p className='text-xs'>pay securly online</p>
-            </div>
-            </div>
-          </div>
-        </section>
         <section>
           <h2 className='text-xl font-medium'>Order Summary</h2>
           <div className='rounded-xl border p-4 space-y-2'>
