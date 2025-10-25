@@ -80,7 +80,7 @@ const Foodcart = ({item}) => {
 
 
   return (
-<div className='flex gap-4   h-full mt-5 ml-4 mb-3'>
+<div className='flex gap-4   h-full mt-5  mb-3'>
           <div className='relative flex flex-col w-90 h-90 border hover:border-[red] rounded overflow-hidden shadow'>
         <img src={item.image} alt="" className='object-cover w-full h-[70%] '/>
         <h2 className='absolute bottom-0  text-white bg-[#000000ba] bg-opacity-20 font-bold w-full py-1 rounded text-center'>{item.name}</h2>
