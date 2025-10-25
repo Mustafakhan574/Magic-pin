@@ -89,7 +89,7 @@ const Signup = () => {
       <div className='mb-4'>
        <label htmlFor="role" className='block text-grey-700 font-medium mb-1'>Role</label>
        <div className='flex gap-2'>
-       {["user","owner","delivery boy"].map((user)=>(
+       {["user","owner"].map((user)=>(
           <button className={`flex-1 border rounded-lg px-3 py-2 text-center font-medium transition-colors focus:bg-orange-500 ${role == user ? "bg-orange-500":""}`} onClick={()=>setrole(user)} key={user}>{user}</button>
        ))}
        </div>
