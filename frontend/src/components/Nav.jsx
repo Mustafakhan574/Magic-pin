@@ -23,7 +23,7 @@ const Nav = () => {
             console.log("cart items in nav",cartitems)
   return (
 <div className='w-full h-[90px] flex  bg-white'>
-<div className='w-full h-[200px] bg-white flex flex-wrap items-center justify-evenly  shadow-2xl gap-[20px]  sm:flex-nowrap sm:h-[90px] ml-2'>
+<div className='w-full h-[200px] bg-white flex flex-wrap items-center justify-evenly  shadow-2xl gap-[20px]  sm:flex-nowrap sm:h-[90px] '>
 <h1 className='text-3xl font-bold mb-2 text-[#1c1cc4] text-center'>Magin-Pin</h1>
 {userData?.role == "owner" && shopData && <div className='flex flex-col'>
   <button onClick={()=>navigate("/add-item")}><FaPlus size={25} className='text-[#1ba31b]'/></button>
