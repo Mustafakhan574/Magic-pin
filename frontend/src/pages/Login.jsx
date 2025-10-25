@@ -51,7 +51,7 @@ const Login = () => {
           }
   return (
     <div className='min-h-screen w-full flex items-center justify-center p-4 bg-[#ffffff95]'>
-          <div className='bg-[white] rounded-2xl shadow-lg w-[60%]  p-8 border-[2px] border-[#0000005d]'>
+          <div className='bg-[white] rounded-2xl shadow-lg w-[98%] sm:w-[60%]  p-8 border-[2px] border-[#0000005d]'>
             <form onSubmit={Login}>
   <h1 className=' text-center text-3xl font-bold mb-2 text-[#0000ffa2]'>Magic-Pin</h1>
   {err?  <h1 className='text-red-500 text-3xl'>{err}</h1>:""}
